@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{267A8774-61DB-4D66-95AB-5CF81E4E40DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel2TeX", "src\Excel2TeX\Excel2TeX.csproj", "{2166EE5D-C21E-4A49-9FC5-B123E35EB8B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B2B1607C-328F-413F-9D9D-13E4AA366D53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel2TeX.test", "test\Excel2TeX.test\Excel2TeX.test.csproj", "{A4C8547D-9621-456E-A69B-CF6A858C4786}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2166EE5D-C21E-4A49-9FC5-B123E35EB8B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2166EE5D-C21E-4A49-9FC5-B123E35EB8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2166EE5D-C21E-4A49-9FC5-B123E35EB8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2166EE5D-C21E-4A49-9FC5-B123E35EB8B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C8547D-9621-456E-A69B-CF6A858C4786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4C8547D-9621-456E-A69B-CF6A858C4786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4C8547D-9621-456E-A69B-CF6A858C4786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4C8547D-9621-456E-A69B-CF6A858C4786}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2166EE5D-C21E-4A49-9FC5-B123E35EB8B0} = {267A8774-61DB-4D66-95AB-5CF81E4E40DE}
+		{A4C8547D-9621-456E-A69B-CF6A858C4786} = {B2B1607C-328F-413F-9D9D-13E4AA366D53}
+	EndGlobalSection
+EndGlobal
