@@ -66,7 +66,7 @@ public class MergedCell(int index, (int y1, int x1, int y2, int x2) bounds)
         {
             if (row == X1)
             {
-                return "multirowcell_begin"
+                return "multirowcell_begin";
             }
             else
             {

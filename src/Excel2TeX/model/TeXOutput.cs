@@ -1,6 +1,6 @@
-﻿namespace Excel2TeX;
+﻿namespace Excel2TeX.Model;
 
-public class TeXOutput
+public class TeXOutputBase(Table table)
 {
-
+    public Table Table { get; } = table;
 }
