@@ -14,7 +14,7 @@ public class LineStyle
     public (int, int) DashStyle { get; set; } = (1, 1);
 }
 
-public class Line(Table table, int index)
+public class Line(Table table, (int x, int y) index)
 {
     // LineStyle dictionary
     public static Dictionary<string, LineStyle> LineStyleDict = new()
@@ -153,7 +153,7 @@ public class Line(Table table, int index)
 
 
     public Table Table { get; set; } = table;
-    public int Index { get; set; } = index;
+    public (int x, int y) Index { get; set; } = index;
     public LineStyle? LineStyle { get; set; }
 
     public bool IsNone { get; set; } = true;
@@ -171,4 +171,69 @@ public class Line(Table table, int index)
     public bool IsIgnoreVerticalLine { get; set; } = false;
 }
 
+public class LineMatrix
+{
 
+    public Table Table { get; }
+    public int XMax { get; set; }
+    public int YMax { get; set; }
+    // for hlines
+    public int[] MaxWidth { get; set; } = [];
+    // for vlines
+    public int[] VLineMaxWidth { get; set; } = [];
+    public Line[][] Borders { get; set; }
+    public LineMatrix(Table table)
+    {
+        Table = table;
+        XMax = table.X2 - 1;
+        YMax = table.Y2 - 1;
+        Borders = new Line[XMax][];
+        for (var i = 0; i < XMax; i++)
+        {
+            for (var j = 0; j < YMax; j++)
+            {
+                Borders[i][j] = new Line(table, (i, j));
+            }
+        }
+    }
+
+    public void SetLines()
+    {
+
+    }
+
+    public bool IsEmpty()
+    {
+        return true;
+    }
+
+    public bool IsFull()
+    {
+        return true;
+    }
+
+    public (int startIndex, int endIndex) CutRange()
+    {
+        return (0, 0);
+    }
+
+    public List<ClineRange> GetHLineRange()
+    {
+        return new List<ClineRange>();
+    }
+
+    public string GetHLineTeX()
+    {
+        return "";
+    }
+
+    public void SetVSpace()
+    {
+
+    }
+
+    public string GetRowHLineTeX()
+    {
+        return "";
+    }
+}
